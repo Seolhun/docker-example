@@ -3,10 +3,6 @@
 OS : macOS Sierra 10.12.5
 Docker version : Docker version 17.06.0-ce, build 02c1d87
 ```
-```
-[Reference Git hub](https://github.com/Seolhun/docker-test/)
-Folder : first-docker/ch2
-```
 
 #### 1)Docker pull Redis & run Redis
 $ docker run -d --name redis redis:3.2.0
