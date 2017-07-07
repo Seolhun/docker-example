@@ -3,10 +3,6 @@
 OS : macOS Sierra 10.12.5
 Docker version : Docker version 17.06.0-ce, build 02c1d87
 ```
-```
-[Reference Git hub](https://github.com/Seolhun/docker-test/)
-Folder : irst-docker/ch1
-```
 
 #### 1)Dockerfile Setting
 $ vim Dockerfile
@@ -32,7 +28,7 @@ $ docker run -d -p 5000:5000 [image-id]
 $ docker-machine ls
 * Url 복사 후 해당 run port와 삽입.
 - ex) http://192.168.99.100:5000/
-- 
+
 #### 6)실행된 Docker-Container 확인
 docker ps
 
