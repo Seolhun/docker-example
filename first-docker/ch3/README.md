@@ -34,8 +34,9 @@ $ ifconfig
 - Most suitable where you want to set up a relatively small network on a single host.
 
 
-```
+
 - 2-1. Default network
+```
 $ docker network ls
 
 $ docker network inspect bridge
@@ -53,9 +54,10 @@ $ docker exec -it container_2 ifconfig
 $ docker exec -it container_1 ping 172.17.0.3
 
 $ docker exec -it container_1 ping 8.8.8.8
-
+```
 
 - 2-2. Creation network
+```
 $ docker network create --driver bridge my_bridge_network
 => inet addr:172.18.0.1
 
@@ -77,9 +79,10 @@ $ docker exec -it container_3 ifconfig
 $ docker network inspect my_bridge_network
 
 $ docker exec -it container_3 ping 172.17.0.2
-
+```
 
 - 2-3. Connection test each other bridge
+```
 $ docker network connect bridge container_3
 
 $ docker exec -it container_3 ifconfig
