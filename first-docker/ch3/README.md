@@ -12,6 +12,7 @@ Docker version : Docker version 17.06.0-ce, build 02c1d87
 - Not a good choice if network or internet connection is required.
 - Suites Well where the container require the maximum level of network security and network access is not necessary.
 
+##### 1-1. Default network
 ```
 $ docker run -d --net none busybox sleep 1000
 => Generated [Container-ID]
@@ -34,8 +35,7 @@ $ ifconfig
 - Most suitable where you want to set up a relatively small network on a single host.
 
 
-
-- 2-1. Default network
+##### 2-1. Default network
 ```
 $ docker network ls
 
@@ -56,7 +56,7 @@ $ docker exec -it container_1 ping 172.17.0.3
 $ docker exec -it container_1 ping 8.8.8.8
 ```
 
-- 2-2. Creation network
+##### 2-2. Creation network
 ```
 $ docker network create --driver bridge my_bridge_network
 => inet addr:172.18.0.1
@@ -81,7 +81,7 @@ $ docker network inspect my_bridge_network
 $ docker exec -it container_3 ping 172.17.0.2
 ```
 
-- 2-3. Connection test each other bridge
+##### 2-3. Connection test each other bridge
 ```
 $ docker network connect bridge container_3
 
