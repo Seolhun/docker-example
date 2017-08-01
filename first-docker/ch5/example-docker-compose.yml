@@ -1,0 +1,30 @@
+version: `2`
+
+services:
+  proxy:
+    build: ./proxy
+    networks:
+      - front
+  
+  app:
+    build: ./app
+    networks:
+      - front
+      - back
+
+  db:
+    image: postgrs
+    networks:
+      - back
+
+networks:
+  front:
+    # Use a custom driver
+    driver: custom-driver-1
+
+  back:
+    # Use a custom driver which takes special options
+    driver: custom-driver-2
+    driver_opts:
+      foo: "1"
+      bar: "2"

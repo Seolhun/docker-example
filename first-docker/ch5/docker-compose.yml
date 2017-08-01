@@ -1,0 +1,20 @@
+version: '2'
+services:
+  dockerapp:
+    build: .
+    ports:
+      - "5000:5000"
+    # host directory : container directory
+    volumes:
+      - ./app:/app
+    networks:
+      - shooney_net
+
+  redis:
+    image: redis:3.2.0
+    networks:
+      - shooney_net
+
+networks:
+  shooney_net:
+    driver: bridge
