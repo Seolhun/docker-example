@@ -11,7 +11,7 @@ Docker-machine version : version 0.12.2, build 9371605
 - [Register DigitalOcean Token](https://cloud.digitalocean.com/settings/api/tokens?i=3a032f)
 
 ## 2)Install Docker-machine
-- [Docker-machin Install](https://docs.docker.com/machine/install-machine/)
+- [Docker-machine Install](https://docs.docker.com/machine/install-machine/)
 
 ---
 
