@@ -1,4 +1,4 @@
-= Docker for Java Developers
+## Docker for Java Developers
 
 This tutorial offers Java developers an intro-level and self-paced hands-on workshop with Docker.
 
